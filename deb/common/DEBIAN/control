@@ -1,8 +1,9 @@
-Package: hgbundler
-Version: 1.0-3
+Package: opt-hgbundler
+Version: 1.0-1
 Depends: mercurial (>= 1.0.1), python-setuptools, python-lxml,
  tidy
 Section: devel
+Provides: python-hgbundler
 Priority: optional
 Architecture: all
 Essential: no
