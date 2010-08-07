@@ -1,0 +1,11 @@
+Package: hgbundler
+Version: 1.0-3
+Depends: mercurial (>= 1.0.1), python-setuptools, python-lxml,
+ tidy
+Section: devel
+Priority: optional
+Architecture: all
+Essential: no
+Installed-Size: 
+Maintainer: Georges Racinet <georges@racinet.fr>
+Description: Manage and release "bundles" of mercurial repos.

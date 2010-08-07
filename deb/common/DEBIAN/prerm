@@ -1,0 +1,16 @@
+#!/bin/sh
+HGBUNDLER=/opt/hgbundler
+
+case "$1" in
+  failed-upgrade)
+  ;;
+  remove|deconfigure)
+     rm -r $HGBUNDLER/develop-eggs $HGBUNDLER/parts $HGBUNDLER/eggs
+     rm -r $HGBUNDLER/bin
+  ;;
+  *)
+    echo "prerm called with unknown argument \`$1'" >&2
+    exit 1
+    ;;
+esac
+

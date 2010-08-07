@@ -1,0 +1,9 @@
+syntax:glob
+packages
+*\#
+*.\#*
+*~
+*.deb
+*.rpm
+opt/*
+repos/deb
