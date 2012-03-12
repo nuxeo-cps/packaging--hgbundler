@@ -1,5 +1,5 @@
 Package: opt-hgbundler
-Version: 1.2.2-2
+Version: 1.2.2-3
 Depends: mercurial (>= 1.0.1), python-setuptools, python-lxml,
  tidy
 Section: devel
