@@ -5,8 +5,9 @@ case "$1" in
   failed-upgrade)
   ;;
   remove|deconfigure)
-     rm -r $HGBUNDLER/develop-eggs $HGBUNDLER/parts $HGBUNDLER/eggs
-     rm -r $HGBUNDLER/bin
+     find $HGBUNDLER -name '*.pyc' -print0 | xargs -0 rm
+     rm -rf $HGBUNDLER/develop-eggs $HGBUNDLER/parts 
+     rm -rf $HGBUNDLER/bin
   ;;
   *)
     echo "prerm called with unknown argument \`$1'" >&2

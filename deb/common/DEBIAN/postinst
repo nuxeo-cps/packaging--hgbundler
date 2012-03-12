@@ -9,9 +9,12 @@ case "$1" in
   configure)
     cd $HGBUNDLER
     if [ ! -f bin/buildout ]; then
-       python bootstrap.py
+       python offline-bootstrap.py -o
     fi
-    bin/buildout -n install eggs
+    # may have remnant of 'test' that's not multiplatform (zope.interface)
+    rm -f $HGBUNDLER/.installed.cfg
+
+    bin/buildout -o -N -c buildout-offline.cfg
     chmod 755 bin/*
     chmod 744 bin/buildout
     ;;
